@@ -1,7 +1,23 @@
 .App {
+  font-family: 'Bitter', serif;
+  font-size: 16px;	
+	color: #000080;
   text-align: center;
 }
 
+h1 {
+  font-size: 4em;
+}
+
+p {
+  font-weight: bold;
+}
+
+.links {
+  list-style: none;
+}
+
+/*
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -36,3 +52,4 @@
     transform: rotate(360deg);
   }
 }
+*/
