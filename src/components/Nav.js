@@ -2,11 +2,11 @@ import React from 'react';
 
 const Nav = () => (
   <nav>
-		<ul>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
+		<ul className="nav">
+			<li>Home</li>
+			<li>About</li>
+			<li>Properties</li>
+			<li>Contact</li>
 		</ul>
   </nav>
 );
