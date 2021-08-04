@@ -5,6 +5,7 @@ import styled from 'styled-components';
 const HeaderStyle = styled.div`
   font-size: 4em;
   font-weight: bold;
+  margin-top: 0.2em;
 `;
 
 const Header = () => {

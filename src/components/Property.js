@@ -1,24 +1,13 @@
 import React from "react";
-
-const PropertyImg = {
-  display: "flex",
-  flexDirection: "row",
-  width: "75%",
-  borderRadius: "25px",
-  margin: "10px auto",
-};
-
-const PropertyDescription = {
-  width: "50%",
-  margin: "0 auto",
-}
+import styled from 'styled-components';
 
 const properties = [
   {
     id: 1,
     image: "images/murray_ave.jpg",
     name: "Murray Avenue",
-    address: "",
+    address1: "2937 N Murray Avenue",
+    address2: "Milwaukee, WI 53211",
     management: "Bella Properties",
     rent: 1575,
     bedroomsPerUnit: 3,
@@ -48,7 +37,8 @@ const properties = [
     id: 3,
     image: "images/delaware_ave.jpg",
     name: "Delaware Ave",
-    address: "",
+    address1: "3006 S. Delaware Avenue",
+    address2: "Milwaukee, WI 53207",
     management: "Scot Henry",
     rent: 1250,
     bedroomsPerUnit: 2,
@@ -77,20 +67,41 @@ const properties = [
   },
 ];
 
+const PropertyImg = {
+  display: "flex",
+  width: "75%",
+  margin: "0 auto",
+  borderRadius: "25px",
+};
+
+const PropertyDesc = styled.div`
+	display: inline;
+`;
+
+const PropertyDescription = {
+  display: "flex",
+  width: "70%",
+  margin: "0 auto 10px auto",
+  textAlign: "justify",
+}
+
 const Property = () => (
   <>
   {properties.map(property => (
-    <div key={property.id}>
-      <h2><img src={property.image} style={PropertyImg} />{property.name}</h2>
-      <p>Address: {property.address}</p>
+    <div>
+    <img src={property.image} style={PropertyImg} />
+    <div key={property.id}><PropertyDesc>
+      <h2>{property.name}</h2>
+      <p><strong>Address:</strong><br />{property.address1}<br />{property.address2}</p>
       <p>Management: {property.management}</p>
-      <p>Rent: {property.rent} per unit</p>
+      <p>Rent: ${property.rent} per unit</p>
       <p>Number of units: {property.units}</p>
       <p>Bedrooms per unit: {property.bedroomsPerUnit}</p>
       <p>Neighborhood: {property.neighborhood}</p>
       <p>Current vacancies: {property.vacancies}</p>
       <p>Phone: {property.phone}</p>
-      <p style={PropertyDescription}>{property.description}</p>
+      <p style={PropertyDescription}>{property.description}</p></PropertyDesc>
+    </div>
     </div>
   ))}
   </>

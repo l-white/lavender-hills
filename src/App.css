@@ -16,16 +16,8 @@
   padding: 0.5em;
 }
 
-p {
-  font-weight: bold;
-}
-
-.links {
-  list-style: none;
-}
-
-.nav {
-  list-style-type: none;
+.PageName {
+  color: "#E3963E";
 }
 
 /*
