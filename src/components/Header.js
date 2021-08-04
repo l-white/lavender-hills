@@ -1,10 +1,17 @@
 import React from 'react';
+//import {HeaderStyle} from './Header.styles';
+import styled from 'styled-components';
+
+const HeaderStyle = styled.div`
+  font-size: 4em;
+  font-weight: bold;
+`;
 
 const Header = () => {
   return (
     <>
-    <h1>Lavender Hill Properties</h1>
-    <h2>Providing safe, affordable housing in Milwaukee since 1997</h2>
+    <HeaderStyle>Lavender Hill Properties</HeaderStyle>
+    <p>Providing safe, affordable housing in Milwaukee since 1997</p>
     </>
   );
 }
