@@ -81,17 +81,16 @@ const Property = () => (
   <>
   {properties.map(property => (
     <div key={property.id}>
-    <h2><img src={property.image} style={PropertyImg} />{property.name}</h2>
-    <p>Address: {property.address}</p>
-    <p>Management: {property.management}</p>
-    <p>Rent: {property.rent} per unit</p>
-    <p>Number of units: {property.units}</p>
-    <p>Bedrooms per unit: {property.bedroomsPerUnit}</p>
-    <p>Neighborhood: {property.neighborhood}</p>
-    <p>Current vacancies: {property.vacancies}</p>
-    <p>Phone: {property.phone}</p>
-    <p style={PropertyDescription}>{property.description}</p>
-
+      <h2><img src={property.image} style={PropertyImg} />{property.name}</h2>
+      <p>Address: {property.address}</p>
+      <p>Management: {property.management}</p>
+      <p>Rent: {property.rent} per unit</p>
+      <p>Number of units: {property.units}</p>
+      <p>Bedrooms per unit: {property.bedroomsPerUnit}</p>
+      <p>Neighborhood: {property.neighborhood}</p>
+      <p>Current vacancies: {property.vacancies}</p>
+      <p>Phone: {property.phone}</p>
+      <p style={PropertyDescription}>{property.description}</p>
     </div>
   ))}
   </>
