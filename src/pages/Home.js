@@ -1,10 +1,14 @@
 import React from "react";
 
+const HomeImg = {
+  display: "flex",
+  width: "90%",
+  borderRadius: "50px",
+};
+
 const Home = () => {
   return (
-    <>
-    <h1>Home</h1>
-  </>
+    <img style={HomeImg} alt="Bay View Homes" src="images/bay-view-homes.jpg" />
   ); 
 }
 
