@@ -1,64 +1,37 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-//import StyledLink from './NavStyle';
-
-/*
-const NavStyle = styled.nav`
-	display: flex;
-	flex-direction: column;
-	
-`;
-
-const ListStyle = styled.ul`
-	list-style-type: none;
-	color: tomato;
-`;
-
-const LinkStyle = styled.li`
-	font-weight: bold;
-	text-decoration: none;
-	
-`;
-
-const StyledLink = styled(Link)`
-    text-decoration: none;
-
-    &:focus, &:hover, &:visited, &:link, &:active {
-        text-decoration: none;
-    }
-`;
-*/
+import { NavLink } from 'react-router-dom';
 
 const NavStyle = styled.nav`
-	height: 85px;
-	display: flex;
-	justify-content: space-between;
-	width: 100%;
+  @media (max-width: 768px) {
+    font-size: 0.8em;
+  }
 `;
 
-const NavListStyle = styled.ul`
-	display: flex;
-	flex-direction: row;
-	list-style-type: none;
-`;
-
+const activeStyle = {
+	color: "#CD7F32",
+};
 const linkStyle = {
-  margin: "1rem",
-  textDecoration: "none",
-	color: 'tomato',
+	margin: "1rem",
+	textDecoration: "none",
+	color: "maroon",
 	fontWeight: "bold",
 	fontSize: "1.2em",
 };
 
 const Nav = () => (
-  <nav><NavStyle>
-		<ul><NavListStyle>
-			<li><Link to="/" style={linkStyle}>Home</Link></li>
-			<li><Link to="/about" style={linkStyle}>About</Link></li>
-			<li><Link to="/properties" style={linkStyle}>Properties</Link></li>
-			<li><Link to="/contact" style={linkStyle}>Contact</Link></li>
-		</NavListStyle></ul>
+	<nav><NavStyle>
+		<NavLink exact to="/" style={linkStyle} 
+		activeStyle={activeStyle}>Home</NavLink>
+		<strong>{' | '}</strong>
+		<NavLink to="/about" style={linkStyle} 
+		activeStyle={activeStyle}>About</NavLink>
+		<strong>{' | '}</strong>
+		<NavLink to="/properties" style={linkStyle} 
+		activeStyle={activeStyle}>Properties</NavLink>
+		<strong>{' | '}</strong>
+		<NavLink to="/contact" style={linkStyle} 
+		activeStyle={activeStyle}>Contact</NavLink>
 	</NavStyle></nav>
 );
 

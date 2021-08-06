@@ -5,6 +5,7 @@ const properties = [
   {
     id: 1,
     image: "images/murray_ave.jpg",
+    alt: "Murray Avenue duplex",
     name: "Murray Avenue",
     address1: "2937 N Murray Avenue",
     address2: "Milwaukee, WI 53211",
@@ -21,6 +22,7 @@ const properties = [
   {
     id: 2,
     image: "images/riverwest.jpg",
+    alt: "Riverwest four family property",
     name: "4 Family",
     address: "",
     management: "Matt Leonard",
@@ -36,6 +38,7 @@ const properties = [
   {
     id: 3,
     image: "images/delaware_ave.jpg",
+    alt: "Delaware Avenue duplex",
     name: "Delaware Ave",
     address1: "3006 S. Delaware Avenue",
     address2: "Milwaukee, WI 53207",
@@ -52,6 +55,7 @@ const properties = [
   {
     id: 4,
     image: "images/wentworth_ave.jpg",
+    alt: "Wentworth Avenue duplex",
     name: "Wentworth Ave",
     address1: "2868 S. Wentworth Avenue",
     address2: "Milwaukee, WI 53207",
@@ -89,7 +93,7 @@ const Property = () => (
   <>
   {properties.map(property => (
     <div>
-    <img src={property.image} style={PropertyImg} />
+    <img alt={property.alt} src={property.image} style={PropertyImg} />
     <div key={property.id}><PropertyDesc>
       <h2>{property.name}</h2>
       <p><strong>Address:</strong><br />{property.address1}<br />{property.address2}</p>
