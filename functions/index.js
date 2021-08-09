@@ -1,5 +1,7 @@
 const functions = require("firebase-functions");
 
+// completed from a tutorial by Jane Sorkin
+
 // // Create and Deploy Your First Cloud Functions
 // // https://firebase.google.com/docs/functions/write-firebase-functions
 //
