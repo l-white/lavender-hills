@@ -11,11 +11,16 @@ const HeaderStyle = styled.div`
   }
 `;
 
+const ParagraphStyle = styled.div`
+  font-weight: bold;
+  font-size: 20px;
+`;
+
 const Header = () => {
   return (
     <>
     <HeaderStyle>Lavender Hill Properties</HeaderStyle>
-    <p>Providing safe, affordable housing in Milwaukee since 1997</p>
+    <p><ParagraphStyle>Providing safe, affordable housing in Milwaukee since 1997</ParagraphStyle></p>
     </>
   );
 }
