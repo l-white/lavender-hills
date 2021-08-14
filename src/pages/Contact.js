@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { Axios, db } from '../firebase/firebaseConfig'
-import styled from 'styled-components';
 
 const InputStyle = {
   display: "flex",
@@ -25,7 +24,6 @@ const ButtonStyle = {
   fontSize: "20px",
 }
   
-
 const ContactForm = () => {
   const [formData, setFormData] = useState({})
 
@@ -46,7 +44,7 @@ const ContactForm = () => {
   }
   const sendEmail = () => {
     Axios.post(
-      'https://us-central1-your-app-name.cloudfunctions.net/submit',
+      'https://us-central1/lavender-hill-properties.firebaseapp.com/emails/Lyz6Iv2MU3fS22csaiYj',
       formData
     )
       .then(res => {
